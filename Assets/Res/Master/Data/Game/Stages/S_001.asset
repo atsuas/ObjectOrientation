@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09169d9447d61429fa5f126572ef15ca, type: 3}
-  m_Name: StageData
+  m_Name: S_001
   m_EditorClassIdentifier: 
-  stageLength: 0
-  enemyName: 
-  hp: 0
-  attack: 0
-  defend: 0
-  experience: 0
-  gold: 0
+  stageLength: 20
+  enemyName: Cat
+  hp: 10
+  attack: 1
+  defend: 2
+  experience: 3
+  gold: 5

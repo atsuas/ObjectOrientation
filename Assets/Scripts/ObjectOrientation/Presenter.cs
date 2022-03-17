@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Presenter : MonoBehaviour
 {
+    
     TodoPresenter todoPresenter = new TodoPresenter();
 
     void Start()
