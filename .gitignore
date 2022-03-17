@@ -59,3 +59,15 @@ sysinfo.txt
 crashlytics-build.properties
 
 *.meta
+*.txt
+*.controller
+*.anim
+*.mat
+*.asset
+*.shader
+*.png
+*.fbx
+*.prefab
+*.unity
+*.terrainlayer
+*.tga
