@@ -12,9 +12,11 @@ public class PlayerPresenter : MonoBehaviour
 
     public CharacterController charController;
 
+    private Camera theCam;
+
     void Start()
     {
-        
+        theCam = Camera.main;
     }
 
     void Update()
@@ -36,5 +38,11 @@ public class PlayerPresenter : MonoBehaviour
 
         // キャラクターコントローラーのMove関数で動かす
         charController.Move(moveDirection * Time.deltaTime);
+
+        // 左右と上下が０ではない場合、Y角をカメラの角度にする
+        if (Input.GetAxisRaw("Horizontal") != 0  || Input.GetAxisRaw("Vertical") != 0)
+        {
+            transform.rotation = Quaternion.Euler(0f, theCam.transform.rotation.eulerAngles.y, 0f);
+        }
     }
 }
