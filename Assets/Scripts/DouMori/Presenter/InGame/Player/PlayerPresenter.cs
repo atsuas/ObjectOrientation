@@ -23,7 +23,9 @@ public class PlayerPresenter : MonoBehaviour
     {
         // 移動させる
         float yStore = moveDirection.y;
-        moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        // moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        // オブジェクトの向きをforwardで決める
+        moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));
         moveDirection = moveDirection * moveSpeed;
         moveDirection.y = yStore;
 
